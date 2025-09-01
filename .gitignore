@@ -1,0 +1,64 @@
+# macOS
+.DS_Store
+
+# Python cache / build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments / environment files
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_convert/
+
+# Data & large assets (raw / processed)
+data/
+datasets/
+outputs/
+artifacts/
+
+# Model weights & checkpoints
+checkpoints/
+runs/
+wandb/
+mlruns/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+
+# Hugging Face / transformers caches
+cache/
+.cache/
+.cache/huggingface/
+huggingface/
+transformers_cache/
+mt5-small/
+
+# Logs
+logs/
+*.log
+events.out.tfevents.*
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Other
+*.swp
+*.tmp
+*.bak
+profile_default/
+__results__/
