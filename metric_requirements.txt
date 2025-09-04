@@ -1,0 +1,6 @@
+ rich<14,>=12.4.4
+google-cloud-bigquery[bqstorage,pandas]>=3.31.0
+google-cloud-bigquery-storage>=2.30.0,<3.0.0
+fsspec==2025.3.2
+gcsfs==2025.3.2
+rouge_score
