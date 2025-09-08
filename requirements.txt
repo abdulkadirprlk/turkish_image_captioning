@@ -1,0 +1,26 @@
+# --- Core runtime ---
+torch>=2.1.0
+torchvision>=0.16.0
+accelerate>=0.29.0          # optional but helpful for device/AMP handling
+
+# --- Hugging Face stack ---
+transformers==4.52.4
+huggingface-hub>=0.32.0,<1.0
+sentencepiece>=0.1.99
+
+# --- Vision / preprocessing ---
+pillow>=10.0.0
+matplotlib>=3.7.0
+
+# --- Metrics & evaluation ---
+nltk>=3.8
+numpy<2.0                   # safer for pycocoevalcap & legacy scripts
+
+# --- CLIP ---
+git+https://github.com/openai/CLIP.git
+
+# --- COCO caption reference metrics (CIDEr, etc.) ---
+pycocoevalcap @ git+https://github.com/salaniz/pycocoevalcap.git
+
+# Faster serialization (optional)
+safetensors>=0.4.2
