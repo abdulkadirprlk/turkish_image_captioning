@@ -31,6 +31,7 @@ artifacts/
 # Model weights & checkpoints
 checkpoints/
 runs/
+run1/
 wandb/
 mlruns/
 *.pt
