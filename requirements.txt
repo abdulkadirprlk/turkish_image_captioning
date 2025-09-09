@@ -22,5 +22,9 @@ git+https://github.com/openai/CLIP.git
 # --- COCO caption reference metrics (CIDEr, etc.) ---
 pycocoevalcap @ git+https://github.com/salaniz/pycocoevalcap.git
 
+# --- HuggingFace evaluate / BERTScore ---
+evaluate>=0.4.3
+bert-score>=0.3.13
+
 # Faster serialization (optional)
 safetensors>=0.4.2
