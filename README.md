@@ -1,1 +1,1 @@
-# bites_tr_image_captioning
+# turkish_image_captioning
