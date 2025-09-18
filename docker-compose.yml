@@ -1,0 +1,35 @@
+services:
+  notebook:
+    build: .
+    image: bites-infer:latest
+    container_name: bites-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/app:cached
+      # Mount datasets and checkpoints from host (adjust paths if needed)
+      - ./data:/app/data:ro
+      - ./checkpoints:/app/checkpoints:ro
+    environment:
+      - HF_HOME=/app/.cache/huggingface
+      - TRANSFORMERS_CACHE=/app/.cache/huggingface
+      - MPLCONFIGDIR=/app/.cache/matplotlib
+    command: ["/bin/bash", "scripts/start-jupyter.sh"]
+
+  streamlit:
+    build: .
+    image: bites-infer:latest
+    container_name: bites-streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./:/app:cached
+      - ./data:/app/data:ro
+      - ./checkpoints:/app/checkpoints:ro
+    environment:
+      - CHECKPOINT_PATH=/app/checkpoints/best.pt
+      - STREAMLIT_SERVER_PORT=8501
+      - HF_HOME=/app/.cache/huggingface
+      - TRANSFORMERS_CACHE=/app/.cache/huggingface
+      - MPLCONFIGDIR=/app/.cache/matplotlib
+    command: ["/bin/bash", "scripts/start-streamlit.sh"]

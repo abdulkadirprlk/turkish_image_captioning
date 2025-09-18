@@ -63,3 +63,5 @@ events.out.tfevents.*
 *.bak
 profile_default/
 __results__/
+test_extractor.py
+test-turkish-image-captioning.ipynb
