@@ -40,7 +40,7 @@ def _lazy_load_scorers() -> Dict[str, Any]:
             st.warning(f"METEOR disabled (Java required): {e}")
     if 'rouge' not in _PYCOCO_SCORERS:
         _PYCOCO_SCORERS['rouge'] = Rouge()
-    # CIDEr disabled per user request
+    # CIDEr disabled
     return _PYCOCO_SCORERS
 
 @st.cache_data(show_spinner=False)

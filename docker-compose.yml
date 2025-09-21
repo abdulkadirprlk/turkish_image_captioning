@@ -1,8 +1,8 @@
 services:
   notebook:
     build: .
-    image: bites-infer:latest
-    container_name: bites-notebook
+    image: image_captioning:latest
+    container_name: notebook
     ports:
       - "8888:8888"
     volumes:
@@ -18,8 +18,8 @@ services:
 
   streamlit:
     build: .
-    image: bites-infer:latest
-    container_name: bites-streamlit
+    image: image_captioning:latest
+    container_name: streamlit
     ports:
       - "8501:8501"
     volumes:
